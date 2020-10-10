@@ -55,9 +55,10 @@ class Student
     end
   end
   
-  def self.first_x_students_in_grade_10(number)
+  def self.first_X_students_in_grade_10(number)
     sql = <<-SQL
-      SELECT * FROM students
+      SELECT *
+      FROM students
       WHERE grade = 10
       ORDER BY students.id
       LIMIT ?
