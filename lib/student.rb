@@ -70,7 +70,8 @@ class Student
   def self.all_studets_in_grade_X
     sql = <<-SQL
     SELECT * FROM students
-    WHERE grade = 
+    WHERE grade = ?
+    ORDER BY students.id
   end
   
   def save
